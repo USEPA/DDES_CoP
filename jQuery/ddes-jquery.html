@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DDES jQuery</title>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+
+<div>Content:</div>
+<table id="content"></table>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $.ajax('https://devcentral.app.cloud.gov/api/index.php/api_longname?api=longname&transform=1&order=longname&page=1,100', {
+            success: function (res) {
+                console.table(res['api_longname']);
+                $("#content").append(`
+                             <tr>
+                                <td>ID</td>
+                                <td>longname_id</td>
+                                <td>longname</td>
+                            </tr>`);
+                $("#content").append(res['api_longname'].map(function (character) {
+                    var row = `
+                            <tr>
+                                <td>${character['id']}</td>
+                                <td>${character['longname_id']}</td>
+                                <td>${character['longname']}</td>
+                            </tr>`;
+
+                    return row;
+                }));
+            }
+        });
+    });
+</script>
+
+</html>

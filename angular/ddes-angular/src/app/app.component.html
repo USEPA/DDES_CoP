@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>LongName ID</th>
+    <th>Longname</th>
+  </tr>
+
+  <tr *ngFor="let longname of dataService.getLongnames() | async">
+    <td>{{longname.id}}</td>
+    <td>{{longname.longname_id}}</td>
+    <td>{{longname.longname}}</td>
+  </tr>
+
+</table>

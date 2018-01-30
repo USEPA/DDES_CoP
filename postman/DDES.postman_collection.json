@@ -1,0 +1,131 @@
+{
+	"info": {
+		"name": "DDES",
+		"_postman_id": "688b2d8a-a1a5-6347-9467-f5d805309e6c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://devcentral.app.cloud.gov/api/index.php/api_longname?api=longname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://devcentral.app.cloud.gov/api/index.php/api_longname?api=longname",
+					"protocol": "https",
+					"host": [
+						"devcentral",
+						"app",
+						"cloud",
+						"gov"
+					],
+					"path": [
+						"api",
+						"index.php",
+						"api_longname"
+					],
+					"query": [
+						{
+							"key": "api",
+							"value": "longname",
+							"equals": true
+						}
+					]
+				},
+				"description": "The base \"get all\" request."
+			},
+			"response": []
+		},
+		{
+			"name": "https://devcentral.app.cloud.gov/api/index.php/api_longname?api=longname copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://devcentral.app.cloud.gov/api/index.php/api_longname?api=longname&transform=1&page=1,50",
+					"protocol": "https",
+					"host": [
+						"devcentral",
+						"app",
+						"cloud",
+						"gov"
+					],
+					"path": [
+						"api",
+						"index.php",
+						"api_longname"
+					],
+					"query": [
+						{
+							"key": "api",
+							"value": "longname",
+							"equals": true
+						},
+						{
+							"key": "transform",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "1,50",
+							"equals": true
+						}
+					]
+				},
+				"description": "Request with Page 1, limit of 50 and transformation to include property names."
+			},
+			"response": []
+		},
+		{
+			"name": "https://devcentral.app.cloud.gov/api/index.php/api_longname?api=longname&transform=1&page=1,50&order=longname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://devcentral.app.cloud.gov/api/index.php/api_longname?api=longname&transform=1&page=1,50&order=longname",
+					"protocol": "https",
+					"host": [
+						"devcentral",
+						"app",
+						"cloud",
+						"gov"
+					],
+					"path": [
+						"api",
+						"index.php",
+						"api_longname"
+					],
+					"query": [
+						{
+							"key": "api",
+							"value": "longname",
+							"equals": true
+						},
+						{
+							"key": "transform",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "1,50",
+							"equals": true
+						},
+						{
+							"key": "order",
+							"value": "longname",
+							"equals": true
+						}
+					]
+				},
+				"description": "Request with paging, sorting and transformation."
+			},
+			"response": []
+		}
+	]
+}
